@@ -1,0 +1,209 @@
+/*
+----------------------------------------------------------------------------------------------------
+Fonts
+----------------------------------------------------------------------------------------------------
+ */
+
+@font-face {
+  font-family: 'Futura PT Demi';
+  src: url('fonts/FuturaPT-Demi.eot');
+  src: url('fonts/FuturaPT-Demi.eot?#iefix') format('embedded-opentype'),
+       url('fonts/FuturaPT-Demi.woff') format('woff'),
+       url('fonts/FuturaPT-Demi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+/*
+----------------------------------------------------------------------------------------------------
+General
+----------------------------------------------------------------------------------------------------
+ */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+#preloader {
+  background: #282828 url(images/Ripple-2s-200px.gif) no-repeat center center;
+  background-size: 20vmin;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 2000; 
+}
+
+/*
+----------------------------------------------------------------------------------------------------
+colors
+----------------------------------------------------------------------------------------------------
+ */
+:root {
+  --my-background: #181818;
+  --my-foreground: #404040;
+  --txt-gray: rgba(255, 255, 255, .6);
+  --txt-black: rgba(255, 255, 255, .87);
+  --icon-dark: rgba(255, 255, 255, .87);
+  --icon-light: rgba(255, 255, 255, .87);
+}
+
+.darkmode {
+  --my-background: #f4f4f4;
+  --my-foreground: #282828;
+  --txt-gray: rgba(0, 0, 0, .5);
+  --txt-black: #000;
+  --icon-dark: #000;
+  --icon-light: #fff;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+  --my-background: #181818;
+  --my-foreground: #404040;
+  --txt-gray: rgba(255, 255, 255, .6);
+  --txt-black: rgba(255, 255, 255, .87);
+  --icon-dark: rgba(255, 255, 255, .87);
+  --icon-light: rgba(255, 255, 255, .87);
+  }
+} */
+
+/*
+----------------------------------------------------------------------------------------------------
+Grid 
+----------------------------------------------------------------------------------------------------
+ */
+.box-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-areas: 
+  "box-01 box-02 box-03"
+  "box-04 box-02 box-06"
+  "box-04 box-05 box-06"
+  "box-07 box-08 box-09"
+  "box-10 box-08 box-12"
+  "box-10 box-11 box-12"
+  "box-00 box-00 box-00"
+  ;
+}
+
+.box-01 {grid-area: box-01;}
+.box-02 {grid-area: box-02;}
+.box-03 {grid-area: box-03;}
+.box-04 {grid-area: box-04;}
+.box-05 {grid-area: box-05;}
+.box-06 {grid-area: box-06;}
+.box-07 {grid-area: box-07;}
+.box-08 {grid-area: box-08;}
+.box-09 {grid-area: box-09;}
+.box-10 {grid-area: box-10;}
+.box-11 {grid-area: box-11;}
+.box-12 {grid-area: box-12;}
+.box-00 {grid-area: box-00;}
+
+.box-grid > div {
+  cursor: pointer;
+}
+
+.box-grid > div:hover {
+  background-color: var(--my-foreground);
+}
+
+.box-grid > .box-00:hover {
+  background-color: transparent;
+  cursor: auto;
+}
+/*
+----------------------------------------------------------------------------------------------------
+Others 
+----------------------------------------------------------------------------------------------------
+ */
+.btn {
+  color: var(--icon-dark);
+}
+
+.btn:hover {
+  background-color: var(--my-foreground) !important;
+  color: var(--icon-light) !important;
+}
+
+button[aria-expanded="true"] {
+  background-color: var(--my-foreground) !important;
+  color: var(--icon-light) !important;
+}
+
+.collapse {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform .6s ease;
+}
+
+.collapse.show {
+  transform: scaleX(1);
+}
+
+.collapsing {
+  transform: scaleX(0);
+}
+
+
+
+
+/*
+----------------------------------------------------------------------------------------------------
+Media queries 
+----------------------------------------------------------------------------------------------------
+ */
+ @media screen and (max-width: 768px) {
+  #hidden-placeholder-button {
+    display: none;
+  }
+  .box-grid {
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+    "box-01 box-02"
+    "box-03 box-02"
+    "box-04 box-05"
+    "box-04 box-06"
+    "box-07 box-06"
+    "box-08 box-09"
+    "box-08 box-10"
+    "box-11 box-10"
+    "box-12   .   "
+    "box-12   .   "
+    "box-00 box-00"
+    ;
+  }
+  .box-02 {
+    margin: 0px 0px 0px 1px !important;
+  }
+  .box-03 {
+    margin: 1px 0px!important;
+  }
+  .box-04{
+    margin: 0px 0px !important;
+  }
+  .box-05 {
+    margin: 1px 0px 0px 1px !important;
+  }
+  .box-06 {
+    margin: 1px 0px 0px 1px !important;
+  }
+  .box-07 {
+    margin: 1px 0px 0px 0px !important;
+  }
+  .box-08 {
+    margin: 1px 0px 0px 0px !important;
+  }
+  .box-09 {
+    margin: 1px 0px 0px 1px !important;
+  }
+  .box-10 {
+    margin: 1px 0px 0px 1px !important;
+  }
+  .box-11 {
+    margin: 1px 0px 0px 0px !important;
+  }
+ }

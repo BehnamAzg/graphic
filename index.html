@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Behnam</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%22-.14em%22 y=%22.9em%22 font-size=%2290%22>💠</text></svg>">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="preloader"></div>
+  <main id="top" class="container-fluid p-0" style="padding: 5% !important; background-color: var(--my-background);">
+    <div class="border p-0" style="border-color: var(--my-foreground) !important;">
+      <div class="d-flex justify-content-end align-items-center" style="outline: solid var(--my-foreground) 1px;">
+
+        <div class="collapse" id="collapseMenu" style="font-size: 0;">
+          <a href="https://www.instagram.com/behnamazg/" target="_blank">
+            <button class="btn rounded-0 p-3" style="outline: solid var(--my-foreground) 1px; margin-right: 1px"
+            data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Instagram">
+              <i><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentcolor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="40" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></circle><rect x="36" y="36" width="184" height="184" rx="48" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></rect><circle cx="180" cy="76" r="8"></circle></svg></i>
+            </button>
+          </a>
+          <a href="https://www.t.me/behnamazg" target="_blank">
+            <button class="btn rounded-0 p-3" style="outline: solid var(--my-foreground) 1px; margin-right: 1px"
+            data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Telegram">
+              <i><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentcolor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M88,134.9,177.9,214a8,8,0,0,0,13.1-4.2L228.6,45.6a8,8,0,0,0-10.7-9.2L33.3,108.9c-7.4,2.9-6.4,13.7,1.4,15.3Z" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path><line x1="88" y1="134.9" x2="224.1" y2="36.6" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line><path d="M132.9,174.4l-31.2,31.2A8,8,0,0,1,88,200V134.9" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path></svg></i>
+            </button>
+          </a>
+          <div style="display:inline;" data-bs-toggle="modal" data-bs-target="#contactModal">
+            <button class="btn rounded-0 p-3" style="outline: solid var(--my-foreground) 1px; margin-right: 1px"
+            data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Contact">
+              <i><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentcolor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M78,201.3,45.1,228.9A8,8,0,0,1,32,222.8V64a8,8,0,0,1,8-8H216a8,8,0,0,1,8,8V192a8,8,0,0,1-8,8H81.7Z" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path><line x1="96" y1="112" x2="160" y2="112" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line><line x1="96" y1="144" x2="160" y2="144" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line></svg></i>
+            </button>
+          </div>
+          <button id="dark-mode-toggle" class="dark-mode-toggle btn rounded-0 p-3" aria-label="toggle dark mode" style="outline: solid var(--my-foreground) 1px; margin-right: 1px"
+          data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Dark / Light" >
+            <i><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentcolor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="60" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></circle><line x1="128" y1="36" x2="128" y2="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line><line x1="62.9" y1="62.9" x2="48.8" y2="48.8" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line><line x1="36" y1="128" x2="16" y2="128" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line><line x1="62.9" y1="193.1" x2="48.8" y2="207.2" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line><line x1="128" y1="220" x2="128" y2="240" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line><line x1="193.1" y1="193.1" x2="207.2" y2="207.2" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line><line x1="220" y1="128" x2="240" y2="128" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line><line x1="193.1" y1="62.9" x2="207.2" y2="48.8" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line></svg></i>
+          </button>
+        </div>
+
+        
+        <button class="my-button btn rounded-0 p-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu" style="outline: solid var(--my-foreground) 1px;">
+          <i><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentcolor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line><line x1="40" y1="64" x2="216" y2="64" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line><line x1="40" y1="192" x2="216" y2="192" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line></svg></i>
+        </button>
+
+      </div>
+      <div class="d-flex align-items-center justify-content-center" style="min-height: 300px;">
+        <div class="m-5" style="max-width: 600px;">
+          <h1 class="mb-3 text-center lh-base" style="font-size: 40px; font-family: 'Futura PT Demi', sans-serif; letter-spacing: .1rem; color: var(--txt-black);">
+            Hey! I'm <span style="color: #00a8e8;">Behnam</span>
+          </h1>
+          <h6 class="mb-4 lh-base text-center" style="color: var(--txt-black);">
+            Graphic Designer | Front-End Developer
+          </h6>
+          <p class="m-0 text-center" style="font-size: 24px; color: var(--txt-gray);">
+            Lorem ipsum dolor sit amet consectetur. Semper consectetur mi id quam vitae. Nibh volutpat sit sit fusce at. Etiam tincidunt senectus nibh viverra. Feugiat faucibus id lectus pretium ipsum semper.
+          </p>
+        </div>
+      </div>
+      <div class="" style="outline: solid var(--my-foreground) 1px;">
+        <div class="box-grid">
+          <div class="box-01 p-2 p-sm-2 p-md-3 p-lg-4 p-xl-5" style="outline: solid black 1px;"
+          data-bs-toggle="modal" data-bs-target="#boxModal01">
+            <img class="img-fluid" src="images/banner.png" loading="lazy">
+          </div>
+          <div class="box-02 p-2 p-sm-2 p-md-3 p-lg-4 p-xl-5" style="outline: solid var(--my-foreground) 1px; margin: 0 1px;" data-bs-toggle="modal" data-bs-target="#boxModal02">
+            <img class="img-fluid" src="images/haland.png" loading="lazy">
+          </div>
+          <div class="box-03 p-2 p-sm-2 p-md-3 p-lg-4 p-xl-5" style="outline: solid var(--my-foreground) 1px;"
+          data-bs-toggle="modal" data-bs-target="#boxModal03">
+            <img class="img-fluid" src="images/news.png" loading="lazy">
+          </div>
+          <div class="box-04 p-2 p-sm-2 p-md-3 p-lg-4 p-xl-5" style="outline: solid var(--my-foreground) 1px; margin: 1px 0;" data-bs-toggle="modal" data-bs-target="#boxModal04">
+            <img class="img-fluid" src="images/atlas.png" loading="lazy">
+          </div>
+          <div class="box-05 p-2 p-sm-2 p-md-3 p-lg-4 p-xl-5" style="outline: solid var(--my-foreground) 1px; margin: 1px 1px;" data-bs-toggle="modal" data-bs-target="#boxModal05">
+            <img class="img-fluid" src="images/maison.png" loading="lazy">
+          </div>
+          <div class="box-06 p-2 p-sm-2 p-md-3 p-lg-4 p-xl-5" style="outline: solid var(--my-foreground) 1px; margin: 1px 0;" data-bs-toggle="modal" data-bs-target="#boxModal06">
+            <img class="img-fluid" src="images/defi.png" loading="lazy">
+          </div>
+          <div class="box-07 p-2 p-sm-2 p-md-3 p-lg-4 p-xl-5" style="outline: solid var(--my-foreground) 1px;"
+          data-bs-toggle="modal" data-bs-target="#boxModal07">
+            <img class="img-fluid" src="images/story.png" loading="lazy">
+          </div>
+          <div class="box-08 p-2 p-sm-2 p-md-3 p-lg-4 p-xl-5" style="outline: solid var(--my-foreground) 1px; margin: 0 1px;" data-bs-toggle="modal" data-bs-target="#boxModal08">
+            <img class="img-fluid" src="images/apply.png" loading="lazy">
+          </div>
+          <div class="box-09 p-2 p-sm-2 p-md-3 p-lg-4 p-xl-5" style="outline: solid var(--my-foreground) 1px;"
+          data-bs-toggle="modal" data-bs-target="#boxModal09">
+            <img class="img-fluid" src="images/deli.png" loading="lazy">
+          </div>
+          <div class="box-10 p-2 p-sm-2 p-md-3 p-lg-4 p-xl-5" style="outline: solid var(--my-foreground)1px; margin: 1px 0;" data-bs-toggle="modal" data-bs-target="#boxModal10">
+            <img class="img-fluid" src="images/afshar.png" loading="lazy">
+          </div>
+          <div class="box-11 p-2 p-sm-2 p-md-3 p-lg-4 p-xl-5" style="outline: solid var(--my-foreground) 1px; margin: 1px 1px;" data-bs-toggle="modal" data-bs-target="#boxModal11">
+            <img class="img-fluid" src="images/kaj.png" loading="lazy">
+          </div>
+          <div class="box-12 p-2 p-sm-2 p-md-3 p-lg-4 p-xl-5" style="outline: solid var(--my-foreground) 1px; margin: 1px 0;" data-bs-toggle="modal" data-bs-target="#boxModal12">
+            <img class="img-fluid" src="images/web.png" loading="lazy">
+          </div>
+          <div class="box-00 d-flex justify-content-between align-items-center position-relative" style="outline: solid var(--my-foreground) 1px; margin: 0px 0;">
+            <button id="hidden-placeholder-button" class="btn rounded-0 p-3" style="outline: solid var(--my-foreground) 1px; visibility: hidden;">
+              <i><?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentcolor"><path d="M6 15l6-6 6 6" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>
+            </button>
+            <p class="m-0 ps-3 ps-md-0" style="font-size: 12px; color: var(--txt-gray);">© 2023 Behnam, All rights reserved.</p>
+            <a href="#top">
+              <button class="btn rounded-0 p-3" style="outline: solid var(--my-foreground) 1px;">
+                <i><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentcolor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><polyline points="48 160 128 80 208 160" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></polyline></svg></i>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="modal fade" id="boxModal01" tabindex="-1" aria-labelledby="boxModal01Label" aria-hidden="true" data-bs-theme="dark">
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content rounded-0">
+              <div class="modal-header text-center">
+                <h1 class="modal-title fs-5" id="boxModal01Label" style="color: rgba(255, 255, 255, .87);">
+                  Afshar Dairy Banner
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img class="img-fluid" src="images/banner.png" loading="lazy" style="max-height: 76vh;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="boxModal02" tabindex="-1" aria-labelledby="boxModal02Label" aria-hidden="true" data-bs-theme="dark">
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content rounded-0">
+              <div class="modal-header text-center">
+                <h1 class="modal-title fs-5" id="boxModal02Label" style="color: rgba(255, 255, 255, .87);">
+                  Haland Store Logo
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img class="img-fluid" src="images/haland.png" loading="lazy" style="max-height: 76vh;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="boxModal03" tabindex="-1" aria-labelledby="boxModal03Label" aria-hidden="true" data-bs-theme="dark">
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content rounded-0">
+              <div class="modal-header text-center">
+                <h1 class="modal-title fs-5" id="boxModal03Label" style="color: rgba(255, 255, 255, .87);">
+                  News Instagram Post Template
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img class="img-fluid" src="images/news.png" loading="lazy" style="max-height: 76vh;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="boxModal04" tabindex="-1" aria-labelledby="boxModal04Label" aria-hidden="true" data-bs-theme="dark">
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content rounded-0">
+              <div class="modal-header text-center">
+                <h1 class="modal-title fs-5" id="boxModal04Label" style="color: rgba(255, 255, 255, .87);">
+                  Atlas Saze Construction Industry Logo
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img class="img-fluid" src="images/atlas.png" loading="lazy" style="max-height: 76vh;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="boxModal05" tabindex="-1" aria-labelledby="boxModal05Label" aria-hidden="true" data-bs-theme="dark">
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content rounded-0">
+              <div class="modal-header text-center">
+                <h1 class="modal-title fs-5" id="boxModal05Label" style="color: rgba(255, 255, 255, .87);">
+                  Betty Maison Flyer
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img class="img-fluid" src="images/maison.png" loading="lazy" style="max-height: 76vh;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="boxModal06" tabindex="-1" aria-labelledby="boxModal06Label" aria-hidden="true" data-bs-theme="dark">
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content rounded-0">
+              <div class="modal-header text-center">
+                <h1 class="modal-title fs-5" id="boxModal06Label" style="color: rgba(255, 255, 255, .87);">
+                  DEFI Bama Logo
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img class="img-fluid" src="images/defi.png" loading="lazy" style="max-height: 76vh;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="boxModal07" tabindex="-1" aria-labelledby="boxModal07Label" aria-hidden="true" data-bs-theme="dark">
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content rounded-0">
+              <div class="modal-header text-center">
+                <h1 class="modal-title fs-5" id="boxModal07Label" style="color: rgba(255, 255, 255, .87);">
+                  Apply Germany Instagram Story
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img class="img-fluid" src="images/story.png" loading="lazy" style="max-height: 76vh;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="boxModal08" tabindex="-1" aria-labelledby="boxModal08Label" aria-hidden="true" data-bs-theme="dark">
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content rounded-0">
+              <div class="modal-header text-center">
+                <h1 class="modal-title fs-5" id="boxModal08Label" style="color: rgba(255, 255, 255, .87);">
+                  Apply Germany Instagram Post Template
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img class="img-fluid" src="images/apply.png" loading="lazy" style="max-height: 76vh;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="boxModal09" tabindex="-1" aria-labelledby="boxModal09Label" aria-hidden="true" data-bs-theme="dark">
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content rounded-0">
+              <div class="modal-header text-center">
+                <h1 class="modal-title fs-5" id="boxModal09Label" style="color: rgba(255, 255, 255, .87);">
+                  Afshar Dairy Free Delivery Flyer
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img class="img-fluid" src="images/deli.png" loading="lazy" style="max-height: 76vh;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="boxModal10" tabindex="-1" aria-labelledby="boxModal10Label" aria-hidden="true" data-bs-theme="dark">
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content rounded-0">
+              <div class="modal-header text-center">
+                <h1 class="modal-title fs-5" id="boxModal10Label" style="color: rgba(255, 255, 255, .87);">
+                  Afshar Dairy Flyers
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img class="img-fluid" src="images/afshar.png" loading="lazy" style="max-height: 76vh;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="boxModal11" tabindex="-1" aria-labelledby="boxModal11Label" aria-hidden="true" data-bs-theme="dark">
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content rounded-0">
+              <div class="modal-header text-center">
+                <h1 class="modal-title fs-5" id="boxModal11Label" style="color: rgba(255, 255, 255, .87);">
+                  Kaje Abi Logo
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img class="img-fluid" src="images/kaj.png" loading="lazy" style="max-height: 76vh;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="boxModal12" tabindex="-1" aria-labelledby="boxModal12Label" aria-hidden="true" data-bs-theme="dark">
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content rounded-0">
+              <div class="modal-header text-center">
+                <h1 class="modal-title fs-5" id="boxModal12Label" style="color: rgba(255, 255, 255, .87);">
+                  Apply Germany Website Redesign Concept
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img class="img-fluid" src="images/web.png" loading="lazy" style="max-height: 76vh;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true" data-bs-theme="dark">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+              <div class="modal-header text-center">
+                <h1 class="modal-title fs-5" id="contactModalLabel" style="color: rgba(255, 255, 255, .87);">
+                  If you have any questions, you can ask them here:
+                </h1>
+              </div>
+              <div class="modal-body">
+                <form action="https://formsubmit.co/BehnamAzg@gmail.com" method="POST">
+                  <div class="row" style="color: rgba(255, 255, 255, .87);">
+                    <div class="col col-12 my-3">
+                      <input type="text" name="name" placeholder="Your name" class="form-control rounded-0" id="recipient-name" style="background-color: transparent;" id="name-text" required>
+                    </div>
+                    <div class="col col-12 mb-3">
+                      <input type="email" name="email" placeholder="Your email" class="form-control rounded-0" id="recipient-name" style="background-color: transparent;" id="email-text" required>
+                    </div>
+                    <div class="col col-12 mb-3">
+                      <textarea rows="8" type="text" name="message" placeholder="Write your message here..." class="form-control rounded-0" id="message-text" style="background-color: transparent;" required></textarea>
+                    </div>
+                  </div>
+                  <div class="col col-12 mb-3 d-flex justify-content-between">
+                    <button type="submit" class="btn btn-primary rounded-0">Send Message</button>
+                    <button type="button" class="btn btn-secondary rounded-0" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
