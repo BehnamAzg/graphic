@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Behnam's Portfolio</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%22-.1em%22 y=%22.9em%22 font-size=%2290%22>✨</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-white text-black work-sans leading-normal text-base tracking-normal font-vazirmatn font-bold">
+
+    <!--Nav-->
+    <nav id="header" class="w-full z-30 top-0 " dir="ltr">
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-4">
+        <div class="order-1 md:order-2">
+          <a class="flex items-end tracking-wide no-underline hover:no-underline font-bold text-xl leading-none hover:scale-105 transition-all" href="#">
+            <span class="">BEHNAM'S</span>
+            <span class="text-xs ml-1 font-semibold text-gray-500">Portfolio</span>
+          </a>
+        </div>
+
+        <div class="order-2 md:order-3 flex  items-center" id="nav-content">
+          <a class="pl-3 inline-block no-underline hover:text-black hover:scale-110 transition-all text-[#26A5E4]" href="https://t.me/behnamazg" target="_blank">
+            <svg class="fill-current " width="22" height="22" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>Telegram</title>
+              <path
+                d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- main -->
+    <section class="bg-gray-100 py-8">
+      <div id="allPosts" class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
+        
+        <!-- 2nd nav -->
+        <nav id="store" class="w-full z-30 top-0 px-6 py-1">
+          <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-1 py-3">
+
+            <!-- title -->
+            <h1 class="font-bold text-xl" href="#"> نمونه کارها </h1>
+
+            <!-- search -->
+            <div class="flex items-center" id="store-nav-content">
+              <a class="inline-block no-underline hover:text-gray-400 hover:scale-110 transition-all" title="Search" href="#">
+                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path
+                    d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </nav>
+
+        
+
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="container flex items-center justify-center mx-auto bg-white py-5 text-gray-500" dir="ltr">
+      <p id="copyright" class="text-[10px]"></p>
+    </footer>
+
+    <!-- dialogs -->
+    <dialog id="imageDialog" class="rounded-lg w-full md:w-2/4 lg:min-w-40 font-medium text-sm aspect-square" dir="rtl">
+      <div class="innerDialog">
+        <!-- close button -->
+        <form method="dialog" class="flex justify-end absolute right-3 top-3">
+          <button
+            class="p-2 rounded-full bg-black hover:bg-gray-400 w-fit h-fit text-white hover:scale-110 transition-transform">
+            <svg class="" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 256 256">
+              <path
+                d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path>
+            </svg>
+          </button>
+        </form>
+        <!-- image -->
+         <div id="dialogImageDiv">
+         </div>
+        
+      </div>
+    </dialog>
+  </body>
+  <script type="module" src="./main.js"></script>
+</html>
