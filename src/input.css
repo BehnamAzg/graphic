@@ -8,11 +8,11 @@
   }
   @font-face {
     font-family: "Vazirmatn";
-    src: url("../fonts/Vazirmatn-Regular.ttf");
+    src: url("./fonts/Vazirmatn-Regular.ttf");
   }
   @font-face {
     font-family: "Vazirmatn";
-    src: url("../fonts/Vazirmatn-Bold.ttf");
+    src: url("./fonts/Vazirmatn-Bold.ttf");
     font-weight: bold;
   }
   @font-face {

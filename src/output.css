@@ -561,13 +561,13 @@ html {
 @font-face {
   font-family: "Vazirmatn";
 
-  src: url("../fonts/Vazirmatn-Regular.ttf");
+  src: url("./fonts/Vazirmatn-Regular.ttf");
 }
 
 @font-face {
   font-family: "Vazirmatn";
 
-  src: url("../fonts/Vazirmatn-Bold.ttf");
+  src: url("./fonts/Vazirmatn-Bold.ttf");
 
   font-weight: bold;
 }
@@ -659,10 +659,6 @@ dialog, .posts {
   order: 2;
 }
 
-.m-auto {
-  margin: auto;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -684,12 +680,12 @@ dialog, .posts {
   display: flex;
 }
 
-.hidden {
-  display: none;
-}
-
 .aspect-square {
   aspect-ratio: 1 / 1;
+}
+
+.h-12 {
+  height: 3rem;
 }
 
 .h-fit {
@@ -701,12 +697,8 @@ dialog, .posts {
   height: 100%;
 }
 
-.h-24 {
-  height: 6rem;
-}
-
-.h-12 {
-  height: 3rem;
+.w-12 {
+  width: 3rem;
 }
 
 .w-fit {
@@ -716,14 +708,6 @@ dialog, .posts {
 
 .w-full {
   width: 100%;
-}
-
-.w-24 {
-  width: 6rem;
-}
-
-.w-12 {
-  width: 3rem;
 }
 
 .flex-col {
@@ -783,28 +767,6 @@ dialog, .posts {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-yellow-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 204 21 / var(--tw-bg-opacity, 1));
-}
-
-.bg-red-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity, 1));
-}
-
-.bg-white\/50 {
-  background-color: rgb(255 255 255 / 0.5);
-}
-
-.bg-white\/20 {
-  background-color: rgb(255 255 255 / 0.2);
-}
-
-.bg-white\/30 {
-  background-color: rgb(255 255 255 / 0.3);
 }
 
 .fill-current {
@@ -872,10 +834,6 @@ dialog, .posts {
 
 .font-vazirmatn {
   font-family: Vazirmatn, sans-serif;
-}
-
-.font-poppins {
-  font-family: Poppins, sans-serif;
 }
 
 .text-\[10px\] {
