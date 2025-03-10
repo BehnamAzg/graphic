@@ -11,22 +11,34 @@ document.addEventListener("DOMContentLoaded", () => {
   postsEl.forEach((i) => {
     i.addEventListener("click", () => {
       imageDialog.showModal();
-      const id = i.getAttribute("data-id")
-      const targetPost = POSTS.find(post => post.id === id);
-      dialogImageDiv.innerHTML = `
+      const id = i.getAttribute("data-id");
+      const targetPost = POSTS.find((post) => post.id === id);
+      if ("video" in targetPost) {
+        dialogImageDiv.innerHTML = `
+        <video class="h-full w-full image" src="${targetPost.video}" loading="lazy" autoplay loop muted></video
+        `;
+      } else {
+        dialogImageDiv.innerHTML = `
         <img class="h-full w-full" src="${targetPost.image}" loading="lazy" />
-      `
+      `;
+      }
     });
   });
-  
+
   // removes the loading spinner when image is loaded
-  document.querySelectorAll(".image").forEach((img) => {
-    img.onload = () => {
-      const container = img.parentElement;
+  document.querySelectorAll(".image").forEach((media) => {
+    // for images
+    media.onload = () => {
+      const container = media.parentElement;
       container.querySelector(".loading-spinner").style.display = "none";
     };
+    // for videos
+    media.addEventListener("loadeddata", () => {
+      const container = media.parentElement;
+      container.querySelector(".loading-spinner").style.display = "none";
+    });
   });
-})
+});
 
 // close dialogs on click
 imageDialog.addEventListener("click", () => {
@@ -39,11 +51,13 @@ innerDialog.forEach((i) => {
 });
 
 // shows the posts in html
-POSTS.forEach(function(post) {
-  let postHTML = `
+POSTS.forEach(function (post) {
+  let postHTML;
+  if ("video" in post) {
+    postHTML = `
     <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col justify-end posts" data-id="${post.id}">
       <button class="rounded-md overflow-hidden hover:scale-105 hover:-translate-y-3 transition-all hover:shadow-md relative bg-white aspect-square">
-        <img class="h-full w-full image" src="${post.cover}" loading="lazy" />
+        <video class="h-full w-full image" src="${post.video}" loading="lazy" autoplay loop muted></video>
         <div class="w-full h-full absolute inset-0 flex justify-center items-center loading-spinner">
           <img class=" w-12 h-12" src="./images/preload.svg" />
         </div>
@@ -54,9 +68,26 @@ POSTS.forEach(function(post) {
         </div>
         <p class="pt-3 text-gray-900 px-1">${post.title}</p>  
     </div>
-  `
+  `;
+  } else {
+    postHTML = `
+      <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col justify-end posts" data-id="${post.id}">
+        <button class="rounded-md overflow-hidden hover:scale-105 hover:-translate-y-3 transition-all hover:shadow-md relative bg-white aspect-square">
+          <img class="h-full w-full image" src="${post.cover}" loading="lazy" />
+          <div class="w-full h-full absolute inset-0 flex justify-center items-center loading-spinner">
+            <img class=" w-12 h-12" src="./images/preload.svg" />
+          </div>
+        </button>
+          <div class="pt-3 flex items-center justify-between px-1">
+            <p class="text-sm text-gray-400">${post.categorie}</p>
+            <p class="text-xs tracking-widest text-gray-400" dir="ltr">${post.date}</p>
+          </div>
+          <p class="pt-3 text-gray-900 px-1">${post.title}</p>  
+      </div>
+    `;
+  }
   allPosts.innerHTML += postHTML;
-})
+});
 
 // show copyright
-document.getElementById("copyright").innerHTML = `&copy; ${new Date().getFullYear()} Behnam Azg, All rights reserved.`
+document.getElementById("copyright").innerHTML = `&copy; ${new Date().getFullYear()} Behnam Azg, All rights reserved.`;

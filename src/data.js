@@ -1,5 +1,12 @@
 export const POSTS = [
   {
+    id: "000",
+    title: "پروژه تمرینی گیم سنتر متاورس",
+    categorie: "موشن گرافیک",
+    video: "./videos/metaverse.mp4",
+    date: "Mar 2025"
+  },
+  {
     id: "001",
     title: "روغن موتور زاگرس تارا طوس",
     categorie: "لیبل",
