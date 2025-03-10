@@ -647,12 +647,12 @@ dialog, .posts {
   top: 0.75rem;
 }
 
-.z-30 {
-  z-index: 30;
-}
-
 .z-10 {
   z-index: 10;
+}
+
+.z-30 {
+  z-index: 30;
 }
 
 .order-1 {
